@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position</title>
+        <style>
+            h1 {
+                margin: 0;
+            }
+
+            .relative {
+                position: relative;
+                height: 300px;
+                width: 100%;
+                background-color: red;
+                color: white;
+            }
+
+            .z-index-2 {
+                position: absolute;
+                top: -50px;
+                right: 0;
+                background-color: green;
+                color: white;
+                width: 300px;
+                height: 200px;
+                z-index: 2;
+            }
+
+            .z-index-3 {
+                position: absolute;
+                top: 50px;
+                right: 150px;
+                background-color: blue;
+                color: white;
+                width: 300px;
+                height: 200px;
+                z-index: 3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Z-index</h1><br>
+        <div class="relative">Position relative 
+
+            <div class="z-index-2">
+                z-index 2
+            </div>
+
+            <div class="z-index-3">
+                z-index 3
+            </div>
+        </div><br>
+    </body>
+
+</html>
