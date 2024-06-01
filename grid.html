@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .grid-container {
+                background-color: green;
+                padding: 10px;
+            }
+
+            .grid-item {
+                background-color: white;
+                font-size: x-large;
+                height: 100px;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: auto;
+                gap: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container" id="container"></div>
+
+        <script>
+            const containerEl = document.getElementById('container')
+            const itemCount = 15
+
+            for (let i = 1; i <= itemCount; i++) {
+                const gridItemEl = document.createElement('div')
+                gridItemEl.classList.add('grid-item', `item-${i}`)
+                gridItemEl.innerHTML = i
+                containerEl.append(gridItemEl)
+            }
+        </script>
+
+    </body>
+
+
+</html>
