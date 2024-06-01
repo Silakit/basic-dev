@@ -16,14 +16,36 @@
             .grid-item {
                 background-color: white;
                 font-size: x-large;
-                height: 100px;
+                padding: 50px 0;
             }
 
             .grid-container {
                 display: grid;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-rows: auto;
                 gap: 10px;
+                grid-template:
+                    'header header header header header header'
+                    'menu main main main right right'
+                    'menu footer footer footer footer footer';
+            }
+
+            .item-1 {
+                grid-area: header;
+            }
+
+            .item-2 {
+                grid-area: menu;
+            }
+
+            .item-3 {
+                grid-area: main;
+            }
+
+            .item-4 {
+                grid-area: right;
+            }
+
+            .item-5 {
+                grid-area: footer;
             }
         </style>
     </head>
@@ -33,7 +55,7 @@
 
         <script>
             const containerEl = document.getElementById('container')
-            const itemCount = 15
+            const itemCount = 5
 
             for (let i = 1; i <= itemCount; i++) {
                 const gridItemEl = document.createElement('div')
