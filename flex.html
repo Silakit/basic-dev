@@ -7,33 +7,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
-            .box {
-                background-color: green;
-                height: 300px;
-            }
-
             .container {
+                background-color: green;
                 display: flex;
-                flex-direction: row;
                 flex-wrap: wrap;
+                /* flex-direction: row-reverse; */
+                justify-content: left;
+                /* align-items: start; */
+                height: 100%;
             }
 
             .item {
                 width: 300px;
-                background-color: red;
-                margin: 4px;
-                color: white;
+                height: 200px;
+                background-color: white;
+                margin: 10px;
                 font-size: 2rem;
                 text-align: center;
+            }
+
+            .item-3 {
+                order: -2;
             }
         </style>
     </head>
 
     <body>
-        <div class="container box">
-            <div class="item">1</div>
-            <div class="item">2</div>
-            <div class="item">3</div>
+        <div class="container">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
         </div>
     </body>
 
