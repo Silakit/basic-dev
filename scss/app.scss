@@ -1,5 +1,48 @@
-$bg-color: #80808037;
-$text-primary-color: black;
+@import 'variables';
+@import 'reset';
+
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@mixin bordered($color: green, $width: 1px) {
+    border: $width solid $color;
+}
+
+.border-red {
+    @include bordered(red, 2px)
+}
+
+.border-blue {
+    @include bordered(blue, 2px)
+}
+
+.border {
+    @include bordered()
+}
+
+.button {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button--report {
+    @extend .button;
+    background-color: red;
+
+}
+
+.button--submit {
+    @extend .button;
+    background-color: green;
+    color: white;
+}
+
 
 .header {
     background-color: $bg-color;
@@ -34,14 +77,15 @@ $text-primary-color: black;
     }
 
     &__link {
-        font-size: 18px;
+        @include important-text();
+        font-size: 18px !important;
     }
 
     &__icon-container {
         display: flex;
     }
 
-    &__header__icon-item {
+    &__icon-item {
         margin: 0 8px;
     }
 }

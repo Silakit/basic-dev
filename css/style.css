@@ -1,3 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border-red {
+  border: 2px solid red;
+}
+
+.border-blue {
+  border: 2px solid blue;
+}
+
+.border {
+  border: 1px solid green;
+}
+
+.button, .button--submit, .button--report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button--report {
+  background-color: red;
+}
+
+.button--submit {
+  background-color: green;
+  color: white;
+}
+
 .header {
   background-color: rgba(128, 128, 128, 0.2156862745);
 }
@@ -25,12 +60,15 @@
   margin: 0 10px;
 }
 .header__link {
-  font-size: 18px;
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  font-size: 18px !important;
 }
 .header__icon-container {
   display: flex;
 }
-.header__header__icon-item {
+.header__icon-item {
   margin: 0 8px;
 }
 
